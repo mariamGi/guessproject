@@ -27,8 +27,26 @@ def guess(x):
 
 guess(20)
 
+# with ths function computer will guess the random number
+
+max_number = random.randint(1, 10)  # random number is between 1 to 10.
 
 
+def guess(max_number):
+    random_numbers = random.randint(1, max_number)
+    computer_choose = random.randint(1, max_number)
+    chance = 5
+    while random_numbers != computer_choose:
+        print(f'you have {chance} chance.\n enter the number from 1 to {max_number}')
+        print(computer_choose)
+        chance -= 1
+        if random_numbers > computer_choose:
+            print('your number is law')
+        elif random_numbers < computer_choose:
+            print('your number is high')
+        if chance == 0:
+            print('No more chances.')
+            break
 
 
-
+guess(max_number)
