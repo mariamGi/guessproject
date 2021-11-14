@@ -24,8 +24,7 @@ def guess(x):
             print('Unfortunately you have exhausted your number of attempts, try again.')
             break
 
-
-guess(20)
+guess(1)
 
 # with ths function computer will guess the random number
 
@@ -50,3 +49,13 @@ def computer_guess(max_number):
 
 
 computer_guess(max_number)
+
+
+def add_number(x, y):
+    return x + y
+
+
+print(add_number(5, 1))
+
+
+
