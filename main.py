@@ -1,15 +1,14 @@
+# with this function user will guess the random number
 import random
 
 
 def guess(x):
     random_number = random.randint(1, x)
     answer = 0
-    chance = 0
-    y = 5
+    chance = 5
     while answer != random_number:
-        answer = input(f'you have {y} chance.\n enter the number from 1 to {x} :')
-        chance += 1
-        y -= 1
+        answer = input(f'you have {chance} chance.\n enter the number from 1 to {x} :')
+        chance -= 1
         if answer.isdigit():
             answer = float(answer)
             if answer > random_number:
@@ -21,7 +20,7 @@ def guess(x):
         else:
             print("I can only read numbers, it is'not number.")
             break
-        if chance == 5:
+        if chance == 0:
             print('Unfortunately you have exhausted your number of attempts, try again.')
             break
 
